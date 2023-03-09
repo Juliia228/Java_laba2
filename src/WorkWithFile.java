@@ -1,9 +1,38 @@
 import java.io.*;
 import java.util.TreeMap;
+
+/**
+ * Class for counting English letters in the file and outputting these counts to another file
+ * @author Julia Komarova
+ */
 public class WorkWithFile {
-    static TreeMap<Character,Integer> dict = new TreeMap<>();
-    public static boolean ReadFile(String filename) {
-        try (FileReader reader = new FileReader(filename)) {
+    private static String file_for_input;
+    private static String file_for_output;
+    /**
+     * Dictionary for counting English letters in the file
+     */
+    private final static TreeMap<Character,Integer> dict = new TreeMap<>();
+    WorkWithFile(String filename_for_input, String filename_for_output) {
+        SetInputFile(filename_for_input);
+        SetOutputFile(filename_for_output);
+    }
+    public static void SetInputFile(String file) {
+        file_for_input = file;
+    }
+    public static void SetOutputFile(String file) {
+        file_for_output = file;
+    }
+    public static String GetInputFile() {
+        return file_for_input;
+    }
+    public static String GetOutputFile() {
+        return file_for_output;
+    }
+    public static TreeMap<Character,Integer> GetDictionary() {
+        return dict;
+    }
+    public static boolean ReadFile() {
+        try (FileReader reader = new FileReader(file_for_input)) {
             int symb = reader.read();
             while (symb > 0) {
                 char symbol = (char)symb;
@@ -26,21 +55,11 @@ public class WorkWithFile {
         }
         return true;
     }
-    public static void WriteToFile(String filename) {
-        try (FileWriter writer = new FileWriter(filename)) {
+    public static void WriteToFile() {
+        try (FileWriter writer = new FileWriter(file_for_output)) {
             for (char key: dict.keySet()) {
                 writer.write("'"+key+"': "+dict.get(key)+"\n");
             }
-//            for (char key = 'A'; key <= 'z'; key++) {
-//                if (key > 'Z' && key < 'a') {
-//                    continue;
-//                }
-//                if (dict.containsKey(key)) {
-//                    writer.write("'"+key+"': "+dict.get(key)+"\n");
-//                } else {
-//                    writer.write("'"+key+"': 0\n");
-//                }
-//            }
             writer.flush();
             System.out.println("The data was written successfully");
         }

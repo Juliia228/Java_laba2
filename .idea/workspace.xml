@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad5f80a8-cb4d-4ab3-9791-5e96cf5b5591" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WorkWithFile.java" afterDir="false" />
+    <list default="true" id="ad5f80a8-cb4d-4ab3-9791-5e96cf5b5591" name="Changes" comment="Implemented work with files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorkWithFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkWithFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +71,8 @@
       <workItem from="1678030219684" duration="2976000" />
       <workItem from="1678362105114" duration="10078000" />
       <workItem from="1678373603012" duration="478000" />
-      <workItem from="1678374956754" duration="2804000" />
+      <workItem from="1678374956754" duration="3256000" />
+      <workItem from="1678388682537" duration="4413000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1678032508929</created>
@@ -81,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678032508929</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implemented work with files">
+      <created>1678379052983</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678379052983</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -89,6 +96,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Implemented work with files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented work with files" />
   </component>
 </project>
