@@ -4,6 +4,9 @@ import java.util.Scanner;
  * @author Julia Komarova
  */
 public class Main {
+    /**
+     * Method of getting file names for input and output
+     */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the name of the file to be parsed: ");
