@@ -9,15 +9,15 @@ public class WorkWithFile {
     /**
      * Name of the file to parse
      */
-    private static String file_for_input;
+    private String file_for_input;
     /**
      * Name of the file to output the result
      */
-    private static String file_for_output;
+    private String file_for_output;
     /**
      * Dictionary for counting English letters in the file
      */
-    private final static TreeMap<Character,Integer> dict = new TreeMap<>();
+    private final TreeMap<Character,Integer> dict = new TreeMap<>();
 
     /**
      * Constructor declaring files for input and output
@@ -33,7 +33,7 @@ public class WorkWithFile {
      * Setter for the file to parse
      * @param file - value for the file to parse
      */
-    public static void SetInputFile(String file) {
+    public void SetInputFile(String file) {
         file_for_input = file;
     }
 
@@ -41,7 +41,7 @@ public class WorkWithFile {
      * Setter for the file to output
      * @param file - value for the file to output the result
      */
-    public static void SetOutputFile(String file) {
+    public void SetOutputFile(String file) {
         file_for_output = file;
     }
 
@@ -49,7 +49,7 @@ public class WorkWithFile {
      * Getter for the file to parse
      * @return value of the file to parse
      */
-    public static String GetInputFile() {
+    public String GetInputFile() {
         return file_for_input;
     }
 
@@ -57,7 +57,7 @@ public class WorkWithFile {
      * Getter for the file to output
      * @return value of the file to output the result
      */
-    public static String GetOutputFile() {
+    public String GetOutputFile() {
         return file_for_output;
     }
 
@@ -65,7 +65,7 @@ public class WorkWithFile {
      * Getter for dictionary with the number of English letters of the file to input
      * @return dictionary
      */
-    public static TreeMap<Character,Integer> GetDictionary() {
+    public TreeMap<Character,Integer> GetDictionary() {
         return dict;
     }
 
@@ -73,7 +73,7 @@ public class WorkWithFile {
      * Method for reading the file and filling in dictionary
      * @return true - reading is successful, false - reading is unsuccessful
      */
-    public static boolean ReadFile() {
+    public boolean ReadFile() {
         try (FileReader reader = new FileReader(file_for_input)) {
             int symb = reader.read();
             while (symb > 0) {
@@ -101,7 +101,7 @@ public class WorkWithFile {
     /**
      * Method for writing data from dictionary to the file
      */
-    public static void WriteToFile() {
+    public void WriteToFile() {
         try (FileWriter writer = new FileWriter(file_for_output)) {
             for (char key: dict.keySet()) {
                 writer.write("'"+key+"': "+dict.get(key)+"\n");
